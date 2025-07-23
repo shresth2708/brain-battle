@@ -220,62 +220,33 @@ function Home() {
         </div>
         <div className="categories-grid">
           {categories.map(category => (
-            <div key={category.id} className="category-card">
-              <div className="category-header">
-                <div className="category-icon">{category.icon}</div>
-                <div className="category-badges">
-                  <span 
-                    className="difficulty-badge" 
-                    style={{ backgroundColor: getDifficultyColor(category.difficulty) }}
-                  >
-                    {category.difficulty}
-                  </span>
-                  <span className="questions-badge">{category.questions}</span>
-                </div>
-              </div>
-              
-              <div className="category-image">
-                <img src={category.image} alt={category.name} />
-                <div className="category-overlay">
-                  <button 
-                    className="quick-play-btn"
-                    onClick={() => handleStartQuiz(category.id)}
-                  >
-                    <span>Play Now</span>
-                    <span className="play-icon">▶</span>
-                  </button>
-                </div>
-              </div>
-              
+            <div key={category.id} className="category-card" onClick={() => handleStartQuiz(category.id)}>
+              <div className="category-icon">{category.icon}</div>
               <div className="category-content">
                 <h3>{category.name}</h3>
                 <p>{category.description}</p>
-                
-                <div className="category-footer">
-                  <div className="category-stats">
-                    <span className="stat">
-                      <span className="stat-icon">⏱️</span>
-                      2-5 min
-                    </span>
-                    <span className="stat">
-                      <span className="stat-icon">🎯</span>
-                      {Math.floor(Math.random() * 30) + 70}% avg
-                    </span>
-                  </div>
-                  <button 
-                    className="play-button"
-                    onClick={() => handleStartQuiz(category.id)}
-                  >
-                    Start Quiz
-                  </button>
-                </div>
+                <span 
+                  className="difficulty-badge" 
+                  style={{ backgroundColor: getDifficultyColor(category.difficulty) }}
+                >
+                  {category.difficulty}
+                </span>
+                <button 
+                  className="play-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleStartQuiz(category.id);
+                  }}
+                >
+                  Start Quiz
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-            {/* Features Section */}
+     {/* Features Section */}
       <section className="features-section">
         <div className="features-header">
           <h2>Why Choose QuizQuest?</h2>
