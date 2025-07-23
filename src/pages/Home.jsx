@@ -91,6 +91,27 @@ function Home() {
     },
   ];
 
+  const testimonials = [
+    {
+      text: "QuizQuest has become my daily brain workout! Love the variety of questions.",
+      author: "Sarah M.",
+      rating: 5,
+      avatar: "S"
+    },
+    {
+      text: "Perfect for family game nights. The difficulty levels keep everyone engaged!",
+      author: "Mike R.",
+      rating: 5,
+      avatar: "M"
+    },
+    {
+      text: "I've learned so much while having fun. The leaderboard keeps me motivated!",
+      author: "Emma T.",
+      rating: 5,
+      avatar: "E"
+    }
+  ];
+
   const features = [
     {
       icon: "🎯",
@@ -254,7 +275,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+            {/* Features Section */}
       <section className="features-section">
         <div className="features-header">
           <h2>Why Choose QuizQuest?</h2>
