@@ -2,29 +2,6 @@ import { Link } from 'react-router-dom';
 import '../styles/Services.css';
 
 function Services() {
-  const mainFeatures = [
-    {
-      id: 1,
-      icon: '🧠',
-      title: 'Intelligent Quiz Engine',
-      description: 'Our advanced quiz system adapts to your knowledge level and provides personalized challenges.',
-      features: ['AI-powered question selection', 'Adaptive difficulty', 'Personalized recommendations']
-    },
-    {
-      id: 2,
-      icon: '🏆',
-      title: 'Competitive Gaming',
-      description: 'Challenge yourself and compete with players worldwide through our ranking system.',
-      features: ['Global leaderboards', 'Achievement system', 'Weekly tournaments']
-    },
-    {
-      id: 3,
-      icon: '📊',
-      title: 'Advanced Analytics',
-      description: 'Track your progress with detailed statistics and performance insights.',
-      features: ['Performance tracking', 'Progress charts', 'Strength analysis']
-    }
-  ];
 
   const services = [
     {
@@ -91,27 +68,6 @@ function Services() {
               <span className="stat-number">5K+</span>
               <span className="stat-label">Active Users</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Features Section */}
-      <section className="main-features">
-        <div className="container">
-          <h2>Core Features</h2>
-          <div className="features-grid">
-            {mainFeatures.map(feature => (
-              <div key={feature.id} className="feature-card">
-                <div className="feature-icon">{feature.icon}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-                <ul className="feature-list">
-                  {feature.features.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
         </div>
       </section>

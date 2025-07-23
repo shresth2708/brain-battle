@@ -91,27 +91,6 @@ function Home() {
     },
   ];
 
-  const testimonials = [
-    {
-      text: "QuizQuest has become my daily brain workout! Love the variety of questions.",
-      author: "Sarah M.",
-      rating: 5,
-      avatar: "S"
-    },
-    {
-      text: "Perfect for family game nights. The difficulty levels keep everyone engaged!",
-      author: "Mike R.",
-      rating: 5,
-      avatar: "M"
-    },
-    {
-      text: "I've learned so much while having fun. The leaderboard keeps me motivated!",
-      author: "Emma T.",
-      rating: 5,
-      avatar: "E"
-    }
-  ];
-
   const features = [
     {
       icon: "🎯",
@@ -209,39 +188,6 @@ function Home() {
               View Leaderboard
             </button>
           </div>
-          
-          {/* Stats */}
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">{animatedStats.users.toLocaleString()}+</span>
-              <span className="stat-label">Active Players</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{animatedStats.quizzes.toLocaleString()}+</span>
-              <span className="stat-label">Quizzes Completed</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{animatedStats.questions.toLocaleString()}+</span>
-              <span className="stat-label">Questions Available</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features-section">
-        <div className="features-header">
-          <h2>Why Choose QuizQuest?</h2>
-          <p>Discover what makes our quiz platform the best choice for knowledge seekers</p>
-        </div>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-            </div>
-          ))}
         </div>
       </section>
       
@@ -308,39 +254,20 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <div className="testimonials-header">
-          <h2>What Our Players Say</h2>
-          <p>Join thousands of satisfied quiz enthusiasts</p>
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="features-header">
+          <h2>Why Choose QuizQuest?</h2>
+          <p>Discover what makes our quiz platform the best choice for knowledge seekers</p>
         </div>
-        <div className="testimonials-container">
-          <div className="testimonial-card active">
-            <div className="testimonial-content">
-              <div className="quote-icon">"</div>
-              <p>{testimonials[currentTestimonial].text}</p>
-              <div className="testimonial-author">
-                <div className="author-avatar">
-                  {testimonials[currentTestimonial].avatar}
-                </div>
-                <div className="author-info">
-                  <span className="author-name">{testimonials[currentTestimonial].author}</span>
-                  <div className="rating">
-                    {'★'.repeat(testimonials[currentTestimonial].rating)}
-                  </div>
-                </div>
-              </div>
+        <div className="features-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
             </div>
-          </div>
-          <div className="testimonial-indicators">
-            {testimonials.map((_, index) => (
-              <button 
-                key={index}
-                className={`indicator ${index === currentTestimonial ? 'active' : ''}`}
-                onClick={() => setCurrentTestimonial(index)}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 
@@ -350,7 +277,6 @@ function Home() {
           <div className="cta-particles"></div>
         </div>
         <div className="cta-content">
-          <div className="cta-icon">🚀</div>
           <h2>Ready to Test Your Knowledge?</h2>
           <p>Join the ultimate quiz experience and discover how much you really know!</p>
           <div className="cta-actions">
@@ -363,26 +289,6 @@ function Home() {
               Create Account
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* Quick Features */}
-      <section className="quick-features">
-        <div className="feature-highlight">
-          <span className="feature-icon">✨</span>
-          <span>New questions added weekly</span>
-        </div>
-        <div className="feature-highlight">
-          <span className="feature-icon">⏱️</span>
-          <span>Beat the clock challenges</span>
-        </div>
-        <div className="feature-highlight">
-          <span className="feature-icon">👥</span>
-          <span>Perfect for solo or group play</span>
-        </div>
-        <div className="feature-highlight">
-          <span className="feature-icon">🏅</span>
-          <span>Achievement system & rewards</span>
         </div>
       </section>
     </div>
