@@ -1,9 +1,10 @@
 /* Modern Home Page Styles */
 .home-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1c4071 0%, #0252ff 100%);
   position: relative;
   overflow-x: hidden;
+  
 }
 
 /* Hero Section */
@@ -17,6 +18,7 @@
   color: white;
   padding: 2rem;
   overflow: hidden;
+  
 }
 
 .hero-background {
@@ -29,14 +31,15 @@
 }
 
 .hero-particles {
+  content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
-  animation: float 8s ease-in-out infinite;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: heroFloat 20s ease-in-out infinite;
 }
 
 @keyframes float {
