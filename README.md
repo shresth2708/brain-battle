@@ -1,4 +1,4 @@
-# Trivia Master 🏆
+# Brain Battle🏆
 
 A modern, interactive trivia quiz app built with React, Vite, and Firebase that challenges your knowledge across multiple categories!
 
@@ -28,7 +28,7 @@ A modern, interactive trivia quiz app built with React, Vite, and Firebase that 
 2. **Quiz** - Interactive quiz experience with timer and score tracking
 3. **Leaderboard** - Global rankings and personal score history
 4. **Authentication** - Sign up or sign in to track your progress
-5. **About** - Learn about the Trivia Master experience
+5. **About** - Learn about the Brain Battleexperience
 6. **Services** - Explore our quiz services
 7. **Blog** - Read articles about trivia and knowledge
 8. **Contact** - Get in touch with our team
@@ -125,4 +125,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Ready to test your knowledge? Start playing Trivia Master today! 🧠✨**
+**Ready to test your knowledge? Start playing Brain Battletoday! 🧠✨**

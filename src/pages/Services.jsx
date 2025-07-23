@@ -54,7 +54,7 @@ function Services() {
       <section className="services-hero">
         <div className="hero-content">
           <h1>Powerful Features for Ultimate Quiz Experience</h1>
-          <p>Discover what makes Trivia Master the best platform for testing your knowledge and competing with others.</p>
+          <p>Discover what makes Brain Battlethe best platform for testing your knowledge and competing with others.</p>
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-number">10K+</span>

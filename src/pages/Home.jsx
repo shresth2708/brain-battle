@@ -221,7 +221,10 @@ function Home() {
         <div className="categories-grid">
           {categories.map(category => (
             <div key={category.id} className="category-card" onClick={() => handleStartQuiz(category.id)}>
-              <div className="category-icon">{category.icon}</div>
+              <div className="category-image">
+                <img src={category.image} alt={category.name} />
+                <div className="category-icon">{category.icon}</div>
+              </div>
               <div className="category-content">
                 <h3>{category.name}</h3>
                 <p>{category.description}</p>

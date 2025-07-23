@@ -16,7 +16,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <h1>Trivia Master</h1>
+        <h1>Brain Battle</h1>
       </div>
       <nav className="navigation">
         <ul>
