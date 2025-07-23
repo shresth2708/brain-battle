@@ -1,0 +1,118 @@
+.header {
+  background-color: #2563eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  color: #e5e7eb;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+.navigation a:hover {
+  color: white;
+}
+
+.navigation a.active {
+  color: white;
+  font-weight: 600;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-greeting {
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.logout-button {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #1e40af;
+}
+
+.auth-link {
+  background: #1d4ed8;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  background: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .navigation ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .auth-section {
+    order: -1;
+    align-self: flex-end;
+  }
+  
+  .user-greeting {
+    font-size: 0.8rem;
+  }
+  
+  .logout-button,
+  .auth-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
