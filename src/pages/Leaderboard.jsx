@@ -153,68 +153,6 @@ function Leaderboard() {
         </div>
       </div>
 
-      {/* User Stats Card */}
-      {currentUser && userStats && (
-        <div className="user-dashboard">
-          <div className="dashboard-header">
-            <div className="user-avatar">
-              <span>{(userStats.displayName || 'U').charAt(0).toUpperCase()}</span>
-            </div>
-            <div className="user-details">
-              <h3>{userStats.displayName || 'Quiz Master'}</h3>
-              <p className="user-rank">Rank #{getUserRank() || 'N/A'} • Level {Math.floor((userStats.totalScore || 0) / 100) + 1}</p>
-            </div>
-            <div className="user-badge">
-              {getUserRank() <= 3 ? '👑' : getUserRank() <= 10 ? '🌟' : '🎯'}
-            </div>
-          </div>
-          
-          <div className="stats-showcase">
-            <div className="stat-card primary">
-              <div className="stat-icon">📊</div>
-              <div className="stat-info">
-                <span className="stat-value">{animatedStats.totalScore || userStats.totalScore || 0}</span>
-                <span className="stat-label">Total Score</span>
-              </div>
-              <div className="stat-trend">+{Math.floor(Math.random() * 50) + 10}%</div>
-            </div>
-            
-            <div className="stat-card secondary">
-              <div className="stat-icon">🎯</div>
-              <div className="stat-info">
-                <span className="stat-value">{animatedStats.quizzesCompleted || userStats.quizzesCompleted || 0}</span>
-                <span className="stat-label">Quizzes Completed</span>
-              </div>
-              <div className="stat-progress">
-                <div className="progress-bar" style={{width: `${Math.min((userStats.quizzesCompleted || 0) * 10, 100)}%`}}></div>
-              </div>
-            </div>
-            
-            <div className="stat-card accent">
-              <div className="stat-icon">⚡</div>
-              <div className="stat-info">
-                <span className="stat-value">{animatedStats.avgScore || (userStats.quizzesCompleted > 0 ? Math.round(userStats.totalScore / userStats.quizzesCompleted) : 0)}</span>
-                <span className="stat-label">Average Score</span>
-              </div>
-              <div className="stat-rating">
-                {'★'.repeat(Math.min(5, Math.floor((animatedStats.avgScore || 0) / 20) + 1))}
-              </div>
-            </div>
-            
-            <div className="stat-card special">
-              <div className="stat-icon">🔥</div>
-              <div className="stat-info">
-                <span className="stat-value">{Math.floor(Math.random() * 15) + 1}</span>
-                <span className="stat-label">Current Streak</span>
-              </div>
-              <div className="streak-indicator">
-                <div className="flame-animation"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Navigation Tabs */}
       <div className="leaderboard-navigation">
         <div className="nav-tabs">
@@ -263,26 +201,6 @@ function Leaderboard() {
               </div>
             ) : (
               <>
-                {/* Top 3 Podium */}
-                <div className="champions-podium">
-                  {leaderboardData.slice(0, 3).map((user, index) => (
-                    <div key={user.id} className={`podium-position position-${index + 1}`}>
-                      <div className="podium-user">
-                        <div className="user-avatar large">
-                          <span>{(user.displayName || 'U').charAt(0).toUpperCase()}</span>
-                        </div>
-                        <div className="crown">{['👑', '🥈', '🥉'][index]}</div>
-                        <h4>{user.displayName || 'Anonymous'}</h4>
-                        <p className="score">{user.totalScore || 0} pts</p>
-                        <p className="quizzes">{user.quizzesCompleted || 0} quizzes</p>
-                      </div>
-                      <div className="podium-base">
-                        <span className="position-number">{index + 1}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
                 {/* Remaining Rankings */}
                 <div className="rankings-list">
                   <div className="rankings-header">
@@ -326,9 +244,6 @@ function Leaderboard() {
                           </div>
                         </div>
                         
-                        <div className="actions-section">
-                          <button className="view-profile-btn">View Profile</button>
-                        </div>
                       </div>
                     ))}
                   </div>
@@ -418,43 +333,7 @@ function Leaderboard() {
                   </div>
                 </div>
 
-                {/* Achievement Section */}
-                <div className="achievements">
-                  <h4>🏆 Achievements</h4>
-                  <div className="achievement-grid">
-                    <div className={`achievement ${userStats.quizzesCompleted >= 1 ? 'unlocked' : 'locked'}`}>
-                      <div className="achievement-icon">🎯</div>
-                      <div className="achievement-info">
-                        <h5>First Steps</h5>
-                        <p>Complete your first quiz</p>
-                      </div>
-                    </div>
-                    
-                    <div className={`achievement ${userStats.quizzesCompleted >= 5 ? 'unlocked' : 'locked'}`}>
-                      <div className="achievement-icon">🔥</div>
-                      <div className="achievement-info">
-                        <h5>Getting Warmed Up</h5>
-                        <p>Complete 5 quizzes</p>
-                      </div>
-                    </div>
-                    
-                    <div className={`achievement ${userStats.quizzesCompleted >= 10 ? 'unlocked' : 'locked'}`}>
-                      <div className="achievement-icon">⭐</div>
-                      <div className="achievement-info">
-                        <h5>Quiz Master</h5>
-                        <p>Complete 10 quizzes</p>
-                      </div>
-                    </div>
-                    
-                    <div className={`achievement ${(userStats.totalScore || 0) >= 500 ? 'unlocked' : 'locked'}`}>
-                      <div className="achievement-icon">💎</div>
-                      <div className="achievement-info">
-                        <h5>High Scorer</h5>
-                        <p>Reach 500 total points</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             )}
           </div>
